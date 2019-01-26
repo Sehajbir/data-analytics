@@ -1,2 +1,2 @@
-The suggested models that should be used are : [['M10', 'M3', 'M1', 'M7', 'M9', 'M4', 'M2']]
-These have an accuracy of 83.33333333333334
+The suggested models that should be used are : [['M1', 'M10', 'M4', 'M5', 'M3', 'M6', 'M8', 'M2', 'M9']]
+These have an accuracy of 57.14285714285714

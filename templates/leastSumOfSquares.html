@@ -31,28 +31,28 @@
     </style>
 	<body>
         <div class="w3-container w3-center">
-        <h1 style="font-family: 'Roboto', sans-serif; color: whitesmoke;">Data Analytics - Binary Classification Ensembling</h1>
+        <h1 style="font-family: 'Roboto', sans-serif; color: whitesmoke;">Data Analytics - Least Sum of Squares</h1>
         </div>
         <div class="w3-container w3-center" style="margin-top: 120px; width: 80%; margin-left: 10%;">
             <h3 style="font-family: 'Roboto', sans-serif; color: whitesmoke; margin-bottom: 25px;">Instructions to use this tool:</h3>
             <div class="w3-row">
                 <div class="w3-half w3-container" style="position: relative; height: 200px;">
-                    <h4 style="font-family: 'Roboto', sans-serif; color: whitesmoke; margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">Make a .csv file containing the result of different models used by you and their outputs by naming each model as M1, M2 and so on...</h4>
+                    <h4 style="font-family: 'Roboto', sans-serif; color: whitesmoke; margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">Make a .csv file containing the values of different features by naming each feature as F1, F2 and so on...</h4>
                 </div>
                 <div class="w3-half" style="height: 200px; position: relative;">
-                    <img src="static/img/ex1.jpg" style="position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">
+                    <img src="static/img/lss1.jpg" style="position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">
                 </div>
             </div>
             <div class="w3-row" style="margin-top: 25px;">
                     <div class="w3-half" style="height: 200px; position: relative;">
-                        <img src="static/img/ex2.jpg" style="position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">
+                        <img src="static/img/lss2.jpg" style="position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">
                     </div>
                     <div class="w3-half w3-container" style="position: relative; height: 200px;">
-                            <h4 style="font-family: 'Roboto', sans-serif; color: whitesmoke; margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%);transform: translateY(-50%);">Name the column conatining the actual results as 'M'</h4>
+                            <h4 style="font-family: 'Roboto', sans-serif; color: whitesmoke; margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%);transform: translateY(-50%);">Name the column conatining the Target Class as 'C'</h4>
                     </div>
             </div>
             <h4 style="font-family: 'Roboto', sans-serif; color: whitesmoke;">All done! Now upload the .csv file to see the result!</h4>
-            <form action="{{ url_for('uploadBinaryClassificationEnsembler') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url_for('uploadLeastSumOfSquares') }}" method="POST" enctype="multipart/form-data">
                 <input style="display: none;" type="file" name="file" id="file-4" class="inputfile inputfile-3" data-multiple-caption="{count} files selected" multiple />
                 <label for="file-4"><span>Choose a file&hellip;</span></label>        
                 <br>

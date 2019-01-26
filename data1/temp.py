@@ -1,24 +1,28 @@
-def binaryClassifier():
+def Classifier():
     import pandas as pd
     import random as rd
-    import statistics as st
+    from collections import Counter
+    from itertools import groupby 
     data = pd.read_csv("data1/data.csv")
     df = pd.DataFrame(data)
     #print(df)
     actual = df['M']
     #print(actual)
     del df['M']
+    num_of_models = len(df.columns)
     accuracy = 0
     for x in range(1000):
-        a = rd.randint(0,9)
+        a = rd.randint(0,num_of_models)
         while a%2 == 0 :
-           a=rd.randint(0,9)
+            a=rd.randint(0,num_of_models)
         df1 = df.sample(a, axis=1)
         l = len(df1.columns)
         x = 0
         mode = []
-        while x<6 :
-            mode.append(st.mode(df1.iloc[x]))
+        while x<len(df1.index) :
+            freqs = groupby(Counter(df1.iloc[x]).most_common(), lambda x:x[1])
+            md = [val for val,count in next(freqs)[1]]
+            mode.append(md[0])
             x += 1
         res = pd.DataFrame({'col' : mode})
         #print(res)
